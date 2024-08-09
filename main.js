@@ -32,6 +32,10 @@ add.addEventListener("click", () => {
   let value = input.value;
   input.value = "";
 
+  if (value === "") {
+    return;
+  }
+
   let newTask = {
     id: Math.floor(Math.random() * (9999999999 - 1000000000 + 1)) + 1000000000,
     title: value,
