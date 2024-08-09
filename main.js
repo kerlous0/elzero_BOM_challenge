@@ -50,6 +50,7 @@ function deleteTask(id) {
   let arrayAfterDelete = array.filter((el) => {
     return el.id !== id;
   });
+
   localStorage.setItem("tasks", JSON.stringify(arrayAfterDelete));
   showElements();
 }
